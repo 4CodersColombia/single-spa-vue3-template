@@ -1,4 +1,5 @@
 # single-spa-vue3-template
+this is a template for single spa using vue3 with typescript
 
 ## Project setup
 ```
