@@ -1,3 +1,3 @@
-import { setPublicPath } from 'systemjs-webpack-interop';
+import { setPublicPath } from "systemjs-webpack-interop";
 
-setPublicPath('single-spa-vue3-template');
+setPublicPath("single-spa-vue3-template");
