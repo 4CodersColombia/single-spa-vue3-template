@@ -6,10 +6,10 @@ const getResourcesLanguages = (resources: { [key: string]: Object }) => {
     return { [item]: { translation: resources[item] } };
   });
   return languages.reduce((acum, current) => {
-    return (acum = {
+    return {
       ...acum,
       ...current,
-    });
+    };
   }, {});
 };
 export const postTranslate = async (resources: { [key: string]: Object }) => {

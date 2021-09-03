@@ -12,6 +12,6 @@ export const LOCALES = {
     loadbundle: "Bundle Laden {{lang}}",
   },
   "es-ES": {
-    message: "jsiaofsadsadosakdfsadka",
+    message: "yo soy una traduccion del lenguage detectado",
   },
 };
