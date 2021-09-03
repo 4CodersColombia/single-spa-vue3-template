@@ -1,6 +1,6 @@
 import i18next from "i18next";
 
-function getResourcesLanguages(resources: any) {
+const getResourcesLanguages = (resources: { [key: string]: Object }) => {
   const keysLanguages = Object.keys(resources);
   const languages = keysLanguages.map((item) => {
     return { [item]: { translation: resources[item] } };
@@ -11,12 +11,11 @@ function getResourcesLanguages(resources: any) {
       ...current,
     });
   }, {});
-}
-export async function postTranslate(language: string, resources: any) {
-  console.log(getResourcesLanguages(resources));
+};
+export const postTranslate = async (resources: { [key: string]: Object }) => {
   await i18next.init({
-    lng: language,
+    lng: navigator.language,
     debug: true,
     resources: getResourcesLanguages(resources),
   });
-}
+};

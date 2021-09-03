@@ -11,7 +11,7 @@ export const LOCALES = {
     term: "Ich akzeptiere {{0}}. {{1}}",
     loadbundle: "Bundle Laden {{lang}}",
   },
-  ee: {
+  "es-ES": {
     message: "jsiaofsadsadosakdfsadka",
   },
 };

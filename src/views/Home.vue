@@ -1,6 +1,7 @@
 <template>
   <div>
     <HelloWorld />
+    {{ translate("message") }}
   </div>
 </template>
 
@@ -8,15 +9,15 @@
 import { defineComponent } from "vue";
 import HelloWorld from "@/components/HelloWorld.vue";
 import i18next from "i18next";
-import { postTranslate } from "@/i18N/ApiTransLate";
+import { postTranslate } from "@/i18N/ApiTranslator";
 import { LOCALES } from "@/i18N/home/TranslationsFooter";
 export default defineComponent({
   name: "Home",
   components: {
     HelloWorld,
   },
-  async created() {
-    await postTranslate("ee", LOCALES);
+  created() {
+    postTranslate(LOCALES);
   },
   methods: {
     translate(key: string) {
