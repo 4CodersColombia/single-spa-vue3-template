@@ -1,7 +1,7 @@
 import Translator from "../ApiTranslator";
 export const translations = {
   en: {
-    EXAMPLE: {
+    TEST: {
       message: "Hello!! - ENssssssss",
       tos: "Term of Service",
       term: "I accept {{1}} {{0}}.",
@@ -14,9 +14,9 @@ type TranslationsKeys =
   keyof typeof translations[keyof typeof translations][Translations];
 
 const language = navigator.language.slice(0, 2);
-export default class ExampleTranslations {
+export default class TestTranslations {
   private constructor() {
-    Translator.getInstance(translations, "EXAMPLE");
+    Translator.getInstance(translations, "TEST");
   }
   public translate(nameSpace: Translations, key: TranslationsKeys): string {
     return Translator.translate(nameSpace, key);
@@ -24,7 +24,7 @@ export default class ExampleTranslations {
   public getTranslations(): typeof translations[keyof typeof translations] {
     return translations[language];
   }
-  public static getInstance(): ExampleTranslations {
-    return new ExampleTranslations();
+  public static getInstance(): TestTranslations {
+    return new TestTranslations();
   }
 }
