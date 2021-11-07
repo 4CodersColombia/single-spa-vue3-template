@@ -1,4 +1,4 @@
-import Translator from "../ApiTranslator";
+import Translator from "../Translator";
 export const translations = {
   en: {
     TEST: {
