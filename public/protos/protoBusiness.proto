@@ -1,0 +1,71 @@
+syntax = "proto3";
+package basic;
+
+//basic protos
+enum Order {
+  DEFAULT_ORDER_TYPE=0;
+  ASC = 1;
+  DESC =2;
+}
+ enum Service {
+  DEFAULT_SERVICE = 0;
+  AUTH = 1;
+  USERS = 2;
+  BLOG = 3;
+  OFFERS = 4;
+  PAYMENTS = 5;
+  NOTIFICATIONS = 6;
+  LEADS = 7;
+  STORAGE = 8;
+  BUSINESS = 9;
+}
+
+enum Languages {
+  DEFAULT=0;
+  es_CO = 1;
+  en_US = 2;
+  pt_BR = 3;
+}
+enum PhoneTypes {
+  DEFAULT_MSG = 0 ;
+  SMS = 1;
+  WHATSAPP = 2;
+}
+enum Genders {
+  DEFAULT_GENDER = 0;
+  MALE=1;
+  FEMALE = 2;
+  OTHER = 3;
+}
+ 
+enum  DocumentType {
+  DEFAULT_TYPE=0;
+  IDENTIFICATION_DOCUMENT = 1;
+  PASSPORT  = 2;
+}
+message ResponseError{
+  int32 res = 1;
+  string msg = 2;
+  map<string,string> data = 3;
+}
+ 
+ 
+message RequestFormat{
+  string topic = 1;
+  string token = 2;
+  Languages language = 3;
+  Service service = 10;
+}
+enum  Risk {
+  DEFAULT_RISK= 0;
+  LOW = 1;
+  MEDIUM =2;
+  HIGH =3;
+}
+enum Networks {
+  DEFAULT_NETWORKS= 0;
+  URL = 1;
+  FACEBOOK = 2;
+  INSTAGRAM = 3;
+  LINKEDIN = 4;
+}
